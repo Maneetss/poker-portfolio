@@ -1,0 +1,118 @@
+/* ── Showdown wrapper ──────────────────────────────── */
+.showdown {
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+/* ── Header ────────────────────────────────────────── */
+.showdown__header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-family: 'JetBrains Mono', 'Courier New', monospace;
+  font-size: 0.6rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: rgba(201,162,39,0.7);
+}
+.showdown__header-label {
+  color: #c9a227;
+}
+
+/* ── Cards row ─────────────────────────────────────── */
+.showdown__cards {
+  display: flex;
+  align-items: flex-end;
+  gap: 6px;
+  flex-wrap: nowrap;
+}
+
+/* Card slot entry animation */
+.showdown__slot {
+  position: relative;
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 350ms ease, transform 350ms ease;
+}
+.showdown__slot--in {
+  opacity: 1;
+  transform: translateY(0);
+}
+@media (prefers-reduced-motion: reduce) {
+  .showdown__slot {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* Divider between hole and community */
+.showdown__divider {
+  position: absolute;
+  right: -10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.2rem;
+  color: rgba(201,162,39,0.4);
+  line-height: 1;
+  pointer-events: none;
+}
+
+/* ── Result ────────────────────────────────────────── */
+.showdown__result {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.showdown__hand-name {
+  font-family: 'Cormorant Garamond', 'Georgia', serif;
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 700;
+  font-style: italic;
+  color: #c9a227;
+  letter-spacing: 0.04em;
+  line-height: 1;
+  text-shadow: 0 0 30px rgba(201,162,39,0.4);
+  margin: 0;
+}
+
+.showdown__tagline {
+  font-family: 'Cormorant Garamond', 'Georgia', serif;
+  font-style: italic;
+  font-size: clamp(0.9rem, 2vw, 1.1rem);
+  color: rgba(240,230,208,0.75);
+  margin: 0;
+  max-width: 480px;
+  line-height: 1.5;
+}
+
+.showdown__refresh {
+  font-family: 'JetBrains Mono', 'Courier New', monospace;
+  font-size: 0.58rem;
+  letter-spacing: 0.14em;
+  color: rgba(201,162,39,0.45);
+  margin: 0.25rem 0 0;
+  text-transform: uppercase;
+}
+
+/* ── Mobile ────────────────────────────────────────── */
+@media (max-width: 600px) {
+  .showdown__cards {
+    gap: 4px;
+  }
+  .showdown__hand-name {
+    font-size: 1.75rem;
+  }
+  .showdown__tagline {
+    font-size: 0.88rem;
+    padding: 0 0.5rem;
+  }
+}

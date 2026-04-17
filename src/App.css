@@ -1,0 +1,17 @@
+/* App-level layout only */
+main {
+  padding-top: var(--nav-h);
+  /* Shift right when panel is open (desktop only) */
+  padding-right: var(--panel-offset, 0px);
+  transition: padding-right 400ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Offset sections for fixed nav anchor scrolling */
+section[id] {
+  scroll-margin-top: var(--nav-h);
+}
+
+/* Mobile: no shift — panel overlays */
+@media (max-width: 768px) {
+  main { padding-right: 0 !important; }
+}

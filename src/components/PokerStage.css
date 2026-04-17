@@ -1,0 +1,90 @@
+/* ── Stage wrapper ─────────────────────────────────── */
+.pstage {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  pointer-events: none; /* don't steal clicks from section content */
+}
+/* hero: absolute bottom-left; other sections: inline right-aligned */
+.pstage--left  { align-items: flex-start; }
+.pstage--right { align-items: flex-end; }
+
+/* ── Label ─────────────────────────────────────────── */
+.pstage__label {
+  font-family: 'JetBrains Mono', 'Courier New', monospace;
+  font-size: 0.58rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: #c9a227;
+  opacity: 0.8;
+  line-height: 1;
+}
+
+/* ── Cards row ─────────────────────────────────────── */
+.pstage__cards {
+  display: flex;
+  gap: 5px;
+  align-items: flex-end;
+}
+
+/* Card entry animation */
+.pstage__slot {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 300ms ease, transform 300ms ease;
+}
+.pstage__slot--in {
+  opacity: 1;
+  transform: translateY(0);
+}
+@media (prefers-reduced-motion: reduce) {
+  .pstage__slot {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* ── Caption ───────────────────────────────────────── */
+.pstage__caption {
+  font-family: 'Cormorant Garamond', 'Georgia', serif;
+  font-style: italic;
+  font-size: 0.68rem;
+  color: rgba(168,144,112,0.7);
+  line-height: 1.3;
+  margin: 0;
+  max-width: 160px;
+}
+.pstage--left  .pstage__caption { text-align: left; }
+.pstage--right .pstage__caption { text-align: right; }
+
+/* ── Hero: absolute positioning in bottom-left ─────── */
+.hero > .pstage {
+  position: absolute;
+  bottom: 3.5rem;
+  left: 2rem;
+  z-index: 3;
+}
+
+/* ── Section inline anchors ─────────────────────────── */
+.pstage-anchor {
+  display: flex;
+  margin-top: 2.5rem;
+}
+.pstage-anchor--right { justify-content: flex-end; }
+.pstage-anchor--left  { justify-content: flex-start; }
+
+/* ── Mobile: scale down & keep clear of content ─────── */
+@media (max-width: 640px) {
+  .hero > .pstage {
+    bottom: 5rem; /* clear scroll indicator */
+    left: 1rem;
+  }
+  /* Shrink captions on small screens */
+  .pstage__caption { font-size: 0.6rem; max-width: 130px; }
+  .pstage-anchor   { margin-top: 1.75rem; }
+}
+@media (max-width: 400px) {
+  /* On very small phones, tuck hole cards tighter */
+  .hero > .pstage { bottom: 6rem; }
+}
