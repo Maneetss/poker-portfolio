@@ -114,6 +114,24 @@
     width: auto;
     padding: 0 16px 24px;
   }
+
+  /* Scale oval cards from 80×112 → 60×84 so 5 community cards fit the panel */
+  .tpcard--oval {
+    width: 60px;
+    height: 84px;
+  }
+  .tp-slot {
+    width: 60px;
+    height: 84px;
+  }
+  .tpcard--oval .tpcard__suit-lg   { font-size: 1.8rem; }
+  .tpcard--oval .tpcard__rank      { font-size: 0.78rem; }
+  .tpcard--oval .tpcard__rank-suit { font-size: 0.55rem; }
+
+  .tp-community { gap: 4px; }
+  .tp-player__cards { gap: 8px; }
+  .tp-table-wrap { height: 400px; }
+  .tp-table-oval { height: 180px; }
 }
 
 /* ── Header ───────────────────────────────────────────── */

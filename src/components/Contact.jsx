@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from '../hooks/useInView';
-import Showdown from './Showdown';
 import './Contact.css';
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -73,9 +72,6 @@ export default function Contact() {
           <p className="contact__sub">
             Ready to deal me in? Let's build something worth betting on.
           </p>
-
-          {/* Poker hand reveal */}
-          <Showdown />
 
           {/* Links card */}
           <div className="contact__card">
