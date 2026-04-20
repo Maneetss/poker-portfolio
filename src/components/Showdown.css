@@ -105,8 +105,21 @@
 
 /* ── Mobile ────────────────────────────────────────── */
 @media (max-width: 600px) {
+  .showdown {
+    max-width: 100%;
+    align-items: stretch;
+  }
   .showdown__cards {
     gap: 4px;
+    overflow-x: auto;
+    overflow-y: visible;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding: 4px 0 12px;
+    justify-content: flex-start;
+  }
+  .showdown__cards::-webkit-scrollbar {
+    display: none;
   }
   .showdown__hand-name {
     font-size: 1.75rem;

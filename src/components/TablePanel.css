@@ -109,7 +109,9 @@
 }
 @media (max-width: 768px) {
   .tp-panel {
-    width: 100vw;
+    left: 0;
+    right: 0;
+    width: auto;
     padding: 0 16px 24px;
   }
 }
