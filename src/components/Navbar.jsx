@@ -2,11 +2,11 @@ import { useState, useEffect } from 'react';
 import './Navbar.css';
 
 const NAV_ITEMS = [
-  { label: 'The Player',  href: '#about',      suit: '♠' },
-  { label: 'The Hand',    href: '#skills',     suit: '♥' },
-  { label: 'The Table',   href: '#experience', suit: '♦' },
-  { label: 'The Bluffs',  href: '#projects',   suit: '♣' },
-  { label: 'Cash Out',    href: '#contact',    suit: '♠' },
+  { label: 'The Player',  sub: 'About',      href: '#about',      suit: '♠' },
+  { label: 'The Hand',    sub: 'Skills',     href: '#skills',     suit: '♥' },
+  { label: 'The Table',   sub: 'Experience', href: '#experience', suit: '♦' },
+  { label: 'The Bluffs',  sub: 'Projects',   href: '#projects',   suit: '♣' },
+  { label: 'Cash Out',    sub: 'Contact',    href: '#contact',    suit: '♠' },
 ];
 
 export default function Navbar() {
@@ -54,7 +54,7 @@ export default function Navbar() {
 
       {/* Desktop links */}
       <ul className="navbar__links" role="list">
-        {NAV_ITEMS.map(({ label, href, suit }) => (
+        {NAV_ITEMS.map(({ label, sub, href, suit }) => (
           <li key={href}>
             <a
               href={href}
@@ -63,7 +63,10 @@ export default function Navbar() {
               aria-current={active === href ? 'page' : undefined}
             >
               <span className="navbar__link-suit" aria-hidden="true">{suit}</span>
-              {label}
+              <span className="navbar__link-inner">
+                {label}
+                <span className="navbar__link-sub">{sub}</span>
+              </span>
             </a>
           </li>
         ))}

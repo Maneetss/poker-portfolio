@@ -198,8 +198,13 @@
   .about__profile-card {
     max-width: 100%;
   }
+  .about__stat-label {
+    font-size: 0.62rem;
+    letter-spacing: 0.1em;
+  }
+  .about__stat-value { font-size: 0.9rem; }
   .about__course {
-    /* ensure comfortable tap target height */
     padding: 0.4rem 0.8rem;
   }
+  .about__text { font-size: 0.95rem; line-height: 1.75; }
 }

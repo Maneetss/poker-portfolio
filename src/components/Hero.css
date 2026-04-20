@@ -396,6 +396,13 @@
 @media (max-width: 480px) {
   .hero__inner { gap: 1rem; }
   .hero__placard { padding: 1.25rem 1.25rem; width: 100%; }
+  .hero__placard-top,
+  .hero__placard-bottom {
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    gap: 0.5rem;
+  }
+  .hero__scroll { display: none; }
   .hero__cards {
     height: 130px;
     width: min(360px, 94vw);

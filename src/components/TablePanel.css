@@ -140,10 +140,10 @@
 }
 .tp-header__label {
   font-family: 'Cormorant Garamond', 'Georgia', serif;
-  font-size: 1.375rem;
+  font-size: 1.5rem;
   font-weight: 600;
   color: #c9a227;
-  letter-spacing: 0.19em;
+  letter-spacing: 0.15em;
 }
 .tp-header__close {
   background: none;
@@ -166,12 +166,12 @@
 
 .tp-subtitle {
   font-family: 'DM Sans', 'Inter', sans-serif;
-  font-size: 0.68rem;
+  font-size: 0.75rem;
   font-style: italic;
-  color: rgba(240, 230, 208, 0.38);
+  color: rgba(240, 230, 208, 0.7);
   text-align: center;
   padding: 0.5rem 0;
-  margin: 0;
+  margin: 0 0 8px;
   flex-shrink: 0;
   border-bottom: 1px solid rgba(201, 168, 76, 0.07);
 }
@@ -235,19 +235,20 @@
 }
 .tp-player__label {
   font-family: 'Cormorant Garamond', 'Georgia', serif;
-  font-size: 0.8rem;
+  font-size: 0.95rem;
   font-style: italic;
   font-weight: 600;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.1em;
   color: #c9a227;
   line-height: 1;
+  margin-bottom: 6px;
 }
 .tp-player__label--you {
   font-family: 'DM Sans', 'Inter', sans-serif;
-  font-size: 0.69rem;
+  font-size: 0.75rem;
   font-style: normal;
   font-weight: 600;
-  letter-spacing: 0.22em;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
   color: rgba(240, 230, 208, 0.8);
 }
@@ -385,7 +386,7 @@
 .tpcard__front {
   position: absolute;
   inset: 0;
-  border-radius: 8px;
+  border-radius: 10px;
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
 }
@@ -428,7 +429,7 @@
 .tpcard__front {
   background: linear-gradient(145deg, #f5f0e8 0%, #ede4d0 100%);
   border: 1px solid rgba(0, 0, 0, 0.14);
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.45), 0 1px 0 rgba(255, 255, 255, 0.8) inset;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.45), 0 1px 0 rgba(255, 255, 255, 0.8) inset, inset 0 0 0 4px rgba(255, 255, 255, 0.9);
   transform: rotateY(180deg);
 }
 
@@ -442,8 +443,8 @@
   line-height: 1;
 }
 .tpcard__corner--tl {
-  top: 4px;
-  left: 5px;
+  top: 5px;
+  left: 6px;
 }
 .tpcard__corner--br {
   bottom: 4px;
@@ -452,19 +453,19 @@
 }
 .tpcard__rank {
   font-family: 'Cormorant Garamond', 'Georgia', serif;
-  font-size: 0.81rem;
+  font-size: 1rem;
   font-weight: 700;
   color: #1a1a1a;
   line-height: 1;
 }
 .tpcard__rank-suit {
-  font-size: 0.56rem;
+  font-size: 0.7rem;
   color: #1a1a1a;
   line-height: 1;
 }
 /* Center suit symbol */
 .tpcard__suit-lg {
-  font-size: 2rem;
+  font-size: 2.4rem;
   color: #1a1a1a;
   line-height: 1;
   position: absolute;
@@ -477,14 +478,14 @@
 /* Red suit coloring */
 .tpcard__front--red .tpcard__rank,
 .tpcard__front--red .tpcard__rank-suit,
-.tpcard__front--red .tpcard__suit-lg { color: #8b0000; }
+.tpcard__front--red .tpcard__suit-lg { color: #c0170f; }
 
 
 /* ── Result-size card overrides (48×67px) ── */
-.tpcard--result .tpcard__back-mono { font-size: 0.65rem; }
-.tpcard--result .tpcard__rank      { font-size: 0.5rem; }
-.tpcard--result .tpcard__rank-suit { font-size: 0.4rem; }
-.tpcard--result .tpcard__suit-lg   { font-size: 1.2rem; }
+.tpcard--result .tpcard__back-mono { font-size: 0.72rem; }
+.tpcard--result .tpcard__rank      { font-size: 0.65rem; }
+.tpcard--result .tpcard__rank-suit { font-size: 0.5rem; }
+.tpcard--result .tpcard__suit-lg   { font-size: 1.5rem; }
 .tpcard--result .tpcard__corner--br { display: none; }
 .tpcard--result .tpcard__corner--tl { top: 3px; left: 3px; }
 
@@ -560,10 +561,10 @@
 }
 .tp-best-label {
   font-family: 'JetBrains Mono', 'Courier New', monospace;
-  font-size: 0.36rem;
+  font-size: 0.55rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: #c9a227;
+  color: rgba(201, 168, 76, 0.8);
   white-space: nowrap;
 }
 .tp-result-row__hand {
@@ -673,8 +674,8 @@
 }
 .tp-stage-label {
   font-family: 'JetBrains Mono', 'Courier New', monospace;
-  font-size: 0.38rem;
-  letter-spacing: 0.06em;
+  font-size: 0.45rem;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   color: rgba(201, 168, 76, 0.3);
   text-align: center;
@@ -684,7 +685,7 @@
 }
 .tp-stage-node--active .tp-stage-label {
   color: #c9a227;
-  font-size: 0.42rem;
+  font-size: 0.5rem;
 }
 .tp-stage-node--reached:not(.tp-stage-node--active) .tp-stage-label {
   color: rgba(201, 168, 76, 0.55);

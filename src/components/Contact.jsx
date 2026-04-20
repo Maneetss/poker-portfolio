@@ -69,6 +69,7 @@ export default function Contact() {
           <div className="suit-divider"><span aria-hidden="true">♣</span></div>
 
           <h2 className="contact__heading">Cash Out</h2>
+          <p className="section-sub">Get in touch</p>
           <p className="contact__sub">
             Ready to deal me in? Let's build something worth betting on.
           </p>

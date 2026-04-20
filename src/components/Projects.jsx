@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from '../hooks/useInView';
 import './Projects.css';
@@ -43,6 +44,7 @@ const PROJECTS = [
 
 export default function Projects() {
   const [ref, inView] = useInView(0.08);
+  const [flipped, setFlipped] = useState(null);
 
   return (
     <section id="projects" className="projects">
@@ -56,19 +58,23 @@ export default function Projects() {
           <p className="section-label">§ 04</p>
           <div className="suit-divider"><span aria-hidden="true">♣</span></div>
           <h2 className="proj__heading">The Bluffs</h2>
-          <p className="proj__sub">Three projects. Hover each card to see what's face-down.</p>
+          <p className="section-sub">Featured projects</p>
+          <p className="proj__sub">Three projects. Tap or hover each card to see what's face-down.</p>
 
           <div className="proj__grid" role="list">
             {PROJECTS.map((p, i) => (
               <motion.article
                 key={p.name}
-                className={`proj__card proj__card--${p.suitColor}`}
+                className={`proj__card proj__card--${p.suitColor}${flipped === i ? ' proj__card--flipped' : ''}`}
                 role="listitem"
                 aria-label={p.name}
+                aria-pressed={flipped === i}
                 initial={{ opacity: 0, y: 30 }}
                 animate={inView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.5, delay: 0.1 + i * 0.12, ease: [0.16, 1, 0.3, 1] }}
                 tabIndex={0}
+                onClick={() => setFlipped(flipped === i ? null : i)}
+                onKeyDown={(e) => e.key === 'Enter' && setFlipped(flipped === i ? null : i)}
               >
                 {/* Front face */}
                 <div className="proj__face proj__face--front">

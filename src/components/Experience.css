@@ -191,4 +191,8 @@
     height: 36px;
   }
   .exp__chip-suit { font-size: 0.9rem; }
+  .exp__content { padding: 0.25rem 0.5rem 3rem; }
+  .exp__bullets { max-width: 100%; }
+  .exp__role { font-size: 1.15rem; }
+  .exp__bullet { font-size: 0.88rem; line-height: 1.65; }
 }

@@ -89,6 +89,24 @@
 .navbar__link--active .navbar__link-suit {
   opacity: 1;
 }
+.navbar__link-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+.navbar__link-sub {
+  display: block;
+  font-family: var(--mono);
+  font-size: 0.38rem;
+  letter-spacing: 0.18em;
+  color: rgba(201,168,76,0.5);
+  text-transform: uppercase;
+  line-height: 1;
+}
+.navbar__link:hover .navbar__link-sub,
+.navbar__link--active .navbar__link-sub {
+  color: rgba(201,168,76,0.8);
+}
 
 /* Burger */
 .navbar__burger {

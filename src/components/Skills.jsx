@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from '../hooks/useInView';
 import './Skills.css';
@@ -35,6 +36,7 @@ const HAND = [
 
 export default function Skills() {
   const [ref, inView] = useInView(0.1);
+  const [flipped, setFlipped] = useState(null);
 
   return (
     <section id="skills" className="skills">
@@ -49,19 +51,23 @@ export default function Skills() {
           <div className="suit-divider"><span aria-hidden="true">♥</span></div>
 
           <h2 className="skills__heading">The Hand</h2>
-          <p className="skills__sub">Four suits. Each card shows the top picks — hover to see the full hand.</p>
+          <p className="section-sub">Skills &amp; tools</p>
+          <p className="skills__sub">Four suits. Each card shows the top picks — tap or hover to see the full hand.</p>
 
           <div className="skills__hand" role="list">
             {HAND.map((card, i) => (
               <motion.div
                 key={card.label}
-                className={`skills__card skills__card--${card.suitColor}`}
+                className={`skills__card skills__card--${card.suitColor}${flipped === i ? ' skills__card--flipped' : ''}`}
                 role="listitem"
                 aria-label={`${card.label}: ${card.items.join(', ')}`}
+                aria-pressed={flipped === i}
                 initial={{ opacity: 0, y: 30 }}
                 animate={inView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.5, delay: 0.1 + i * 0.1, ease: [0.16, 1, 0.3, 1] }}
                 tabIndex={0}
+                onClick={() => setFlipped(flipped === i ? null : i)}
+                onKeyDown={(e) => e.key === 'Enter' && setFlipped(flipped === i ? null : i)}
               >
                 <div className="skills__card-front">
                   <div className="skills__card-corner skills__card-corner--tl">

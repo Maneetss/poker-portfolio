@@ -61,7 +61,8 @@
 .contact__card-motto {
   font-family: var(--serif-alt);
   font-style: italic;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
+  line-height: 1.7;
   color: var(--cream-dim);
   text-align: center;
   flex: 1;
@@ -172,8 +173,8 @@
 }
 .contact__form-title {
   font-family: var(--mono);
-  font-size: 0.62rem;
-  letter-spacing: 0.22em;
+  font-size: 0.75rem;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--gold);
 }
@@ -191,8 +192,8 @@
 }
 .contact__field-label {
   font-family: var(--mono);
-  font-size: 0.62rem;
-  letter-spacing: 0.18em;
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--cream-dim);
 }
@@ -202,7 +203,7 @@
   border-radius: 4px;
   padding: 0.7rem 0.9rem;
   font-family: var(--sans);
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   color: var(--cream);
   outline: 2px solid transparent;
   outline-offset: 2px;
@@ -210,7 +211,7 @@
   width: 100%;
 }
 .contact__input::placeholder {
-  color: rgba(168,144,112,0.45);
+  color: rgba(240,230,208,0.5);
 }
 .contact__input:focus {
   border-color: rgba(201,162,39,0.55);
@@ -313,6 +314,15 @@
 @media (max-width: 520px) {
   .contact__inner { text-align: left; }
   .contact__card-motto { font-size: 0.72rem; padding: 0 0.5rem; }
+  .contact__submit {
+    align-self: stretch;
+    width: 100%;
+    justify-content: center;
+    min-height: 48px;
+  }
+  .contact__form { padding: 1.25rem 1rem; gap: 1rem; }
+  .contact__link { padding: 1.1rem 1rem; }
+  .contact__link-value { font-size: 0.85rem; word-break: break-all; }
   .contact__footer-inner {
     flex-direction: column;
     align-items: center;

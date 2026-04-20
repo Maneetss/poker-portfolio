@@ -31,7 +31,7 @@
 .pcard__front {
   position: absolute;
   inset: 0;
-  border-radius: 6px;
+  border-radius: 10px;
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
 }
@@ -46,7 +46,7 @@
   justify-content: center;
 }
 .pcard__monogram {
-  font-family: 'Playfair Display', 'Georgia', serif;
+  font-family: 'Cormorant Garamond', 'Georgia', serif;
   font-size: 0.72rem;
   font-weight: 700;
   color: rgba(201,162,39,0.65);
@@ -62,7 +62,8 @@
   border: 1px solid rgba(0,0,0,0.12);
   box-shadow:
     0 4px 20px rgba(0,0,0,0.5),
-    0 1px 0 rgba(255,255,255,0.8) inset;
+    0 1px 0 rgba(255,255,255,0.8) inset,
+    inset 0 0 0 4px rgba(255,255,255,0.9);
   transform: rotateY(180deg);
   display: flex;
   align-items: center;
@@ -82,21 +83,21 @@
 .pcard__corner--br { bottom: 4px; right: 5px; transform: rotate(180deg); }
 
 .pcard__rank {
-  font-family: 'Playfair Display', 'Georgia', serif;
-  font-size: 0.68rem;
+  font-family: 'Cormorant Garamond', 'Georgia', serif;
+  font-size: 0.85rem;
   font-weight: 800;
   color: #1a1a1a;
   display: block;
   line-height: 1;
 }
 .pcard__suit-sm {
-  font-size: 0.5rem;
+  font-size: 0.62rem;
   color: #1a1a1a;
   display: block;
   line-height: 1;
 }
 .pcard__suit-lg {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   color: #1a1a1a;
   line-height: 1;
   display: block;
@@ -105,20 +106,20 @@
 /* Red variants */
 .pcard__front--red .pcard__rank,
 .pcard__front--red .pcard__suit-sm,
-.pcard__front--red .pcard__suit-lg { color: #8b0000; }
+.pcard__front--red .pcard__suit-lg { color: #c0170f; }
 
 /* ── Size adjustments ─────────────────────────────── */
-.pcard--md .pcard__suit-lg  { font-size: 2rem; }
-.pcard--md .pcard__rank     { font-size: 0.85rem; }
-.pcard--md .pcard__suit-sm  { font-size: 0.6rem; }
-.pcard--md .pcard__monogram { font-size: 0.85rem; }
+.pcard--md .pcard__suit-lg  { font-size: 2.4rem; }
+.pcard--md .pcard__rank     { font-size: 1.1rem; }
+.pcard--md .pcard__suit-sm  { font-size: 0.75rem; }
+.pcard--md .pcard__monogram { font-size: 0.9rem; }
 .pcard--md .pcard__corner--tl { top: 5px; left: 6px; }
 .pcard--md .pcard__corner--br { bottom: 5px; right: 6px; }
 
-.pcard--lg .pcard__suit-lg  { font-size: 2.6rem; }
-.pcard--lg .pcard__rank     { font-size: 1rem; }
-.pcard--lg .pcard__suit-sm  { font-size: 0.7rem; }
-.pcard--lg .pcard__monogram { font-size: 1rem; }
+.pcard--lg .pcard__suit-lg  { font-size: 3rem; }
+.pcard--lg .pcard__rank     { font-size: 1.3rem; }
+.pcard--lg .pcard__suit-sm  { font-size: 0.9rem; }
+.pcard--lg .pcard__monogram { font-size: 1.1rem; }
 .pcard--lg .pcard__corner--tl { top: 6px; left: 8px; }
 .pcard--lg .pcard__corner--br { bottom: 6px; right: 8px; }
 

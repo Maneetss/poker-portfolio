@@ -76,11 +76,13 @@
 }
 .proj__face--back::-webkit-scrollbar { display: none; }
 
-/* Flip on hover/focus */
+/* Flip on hover / focus / tap */
 .proj__card:hover .proj__face--front,
-.proj__card:focus-within .proj__face--front { transform: rotateY(-180deg); }
+.proj__card:focus-within .proj__face--front,
+.proj__card--flipped .proj__face--front { transform: rotateY(-180deg); }
 .proj__card:hover .proj__face--back,
-.proj__card:focus-within .proj__face--back  { transform: rotateY(0deg); }
+.proj__card:focus-within .proj__face--back,
+.proj__card--flipped .proj__face--back  { transform: rotateY(0deg); }
 
 /* Corner rank */
 .proj__face-corner {

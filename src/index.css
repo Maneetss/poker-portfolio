@@ -20,7 +20,7 @@
   --cream-dim:   #a89070;
   --white:       #ffffff;
   --mono:        'JetBrains Mono', 'Courier New', monospace;
-  --serif:       'Playfair Display', 'Georgia', serif;
+  --serif:       'Cormorant Garamond', 'Georgia', serif;
   --serif-alt:   'Cormorant Garamond', 'Georgia', serif;
   --sans:        'Inter', system-ui, sans-serif;
   --nav-h:       68px;
@@ -39,7 +39,8 @@ body {
   background-color: var(--black);
   color: var(--cream);
   font-family: var(--sans);
-  line-height: 1.65;
+  font-size: 1rem;
+  line-height: 1.7;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
 }
@@ -166,6 +167,17 @@ body {
   text-transform: uppercase;
   color: var(--gold);
   margin-bottom: 0.5rem;
+}
+
+/* ── Section sub-heading (plain-language label) ─────── */
+.section-sub {
+  font-family: var(--mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(201, 168, 76, 0.55);
+  margin-top: -0.5rem;
+  margin-bottom: 2rem;
 }
 
 /* ── Section container ──────────────────────────────── */

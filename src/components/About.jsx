@@ -68,6 +68,7 @@ export default function About() {
             {/* Bio */}
             <div className="about__bio">
               <h2 className="about__heading">The Player</h2>
+              <p className="section-sub">About me</p>
 
               <div className="about__open-signal" aria-label="Open to Summer 2026 Internships">
                 <span className="about__open-dot" aria-hidden="true" />

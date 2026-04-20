@@ -57,6 +57,7 @@ export default function Experience() {
           <p className="section-label">§ 03</p>
           <div className="suit-divider"><span aria-hidden="true">♦</span></div>
           <h2 className="exp__heading">The Table</h2>
+          <p className="section-sub">Work experience</p>
           <p className="exp__sub">Previous hands played. Each round dealt something new.</p>
 
           <div className="exp__timeline">
